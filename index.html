@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Responsive Images by Windjy E. Jean</h1>
+
+    <ul class="gallery">
+        <li>
+            <!-- Kung Malir, Hangol, Pakistan -->
+            <picture>
+                <!-- Large Size Active Over 1500PX-->
+                <source srcset="img/fahim-akhter-kund-malir-pakistan_800x600.jpg" media="(min-width: 1500px)" />
+                <!-- Medium Size Active Between 700PX and 1500PX -->
+                <source srcset="img/fahim-akhter-kund-malir-pakistan_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <!-- Small Size Active Under 700PX-->
+                <source srcset="img/fahim-akhter-kund-malir-pakistan_400x300.jpg" media="(max-width: 700px)" />
+                <!-- Default -->
+                <img src="img/fahim-akhter-kund-malir-pakistan_600x450.jpg" alt="Kund Malir, Hangol, Pakistan" title="Kund Malir, Hangol, Pakistan" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Controlled farming fresh bio carrot -->
+
+            <picture>
+                <source srcset="img/markus-spiske-carrots_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/markus-spiske-carrots_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/markus-spiske-carrots_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/markus-spiske-carrots_600x450.jpg" alt="Markus' controlled farming fresh bio carrot" title="Markus' controlled farming fresh bio carrot" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Music festival live concert fans -->
+
+            <picture>
+                <source srcset="img/markus-spiske-concert-crowd_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/markus-spiske-concert-crowd_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/markus-spiske-concert-crowd_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/markus-spiske-concert-crowd_600x450.jpg" alt="Music festival live concert fans" title="Music festival live concert fans" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Markus' e gitarre / e-guitar -->
+
+            <picture>
+                <source srcset="img/markus-spiske-guitar_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/markus-spiske-guitar_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/markus-spiske-guitar_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/markus-spiske-guitar_600x450.jpg" alt="Markus' e gitarre / e-guitar" title="Markus' e gitarre / e-guitar" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Sunset over Castlerock lake -->
+
+            <picture>
+                <source srcset="img/yiman-chen-castlerock-wisconsin_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/yiman-chen-castlerock-wisconsin_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/yiman-chen-castlerock-wisconsin_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/yiman-chen-castlerock-wisconsin_600x450" alt="Sunset over Castlerock lake" title="Sunset over Castlerock lake" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Sitting on the bluff -->
+
+            <picture>
+                <source srcset="img/yiman-chen-gibraltar-rock-wisconsin_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/yiman-chen-gibraltar-rock-wisconsin_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/yiman-chen-gibraltar-rock-wisconsin_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/yiman-chen-gibraltar-rock-wisconsin_600x450.jpg" alt="Sitting on the bluff" title="Sitting on the bluff" />
+            </picture>
+
+        </li>
+        <li>
+            <!-- Live on stage -->
+
+            <picture>
+                <source srcset="img/markus-spiske-stage_800x600.jpg" media="(min-width: 1500px)" />
+                <source srcset="img/markus-spiske-stage_600x450.jpg" media="(min-width: 700px) and (max-width: 1500px)" />
+                <source srcset="img/markus-spiske-stage_400x300.jpg" media="(max-width: 700px)" />
+                <img src="img/markus-spiske-stage_600x450.jpg" alt="Live on stage" title="Live on stage" />
+            </picture>
+
+        </li>
+    </ul>
+
+</body>
+
+</html>

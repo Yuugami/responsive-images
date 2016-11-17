@@ -1,0 +1,178 @@
+/******************************************************************************
+*                            --- Rubric ---
+*******************************************************************************
+
+1. Images in all 3 size catagories are exactly the same pixel size [X]
+
+2. Three versions of each image are created and sized as required [X]
+
+3. Images are all 72 dpi and saved at medium to high quality using a 
+web optomized format [X]
+
+4. Attribution for the images is added as a comment in either the CSS 
+or HTML file [X]
+
+5. Inside a ul an li tag containing a picture tag is created for each image [X]
+
+6. Each picture tag has 3 correct srcset attributes [X]
+
+7. Medium size images are set as default for ALL <img> elements and 
+each <img> tag also has an alt attribute [X]
+
+8. All <picture> and <img> elements have a default max-width of 90% [X]
+
+9. media-queries are created so that the required columns are created for 
+the 3 required layouts: 
+Less than 600px - one column layout, 
+between 600px and 1200px - two column layout, 
+above 1200px - four column layout [X]
+******************************************************************************/
+
+
+/* Core */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+
+/* Default */
+
+body {
+    background-image: linear-gradient(to top left, #222 40%, #DDDDDD);
+    background-attachment: fixed;
+}
+
+h1 {
+    margin: 0.5rem 0;
+    text-align: center;
+    color: gold;
+    text-shadow: 0 2px 3px #000, 0 -2px 1px #00F, 0 0 1px #0F0, -2px 0 3px #000, -2px -2px 1px #F00, -2px 2px 3px #000, 2px 0 1px #0F0, 2px -2px 1px #00F, 2px 2px 1px #F00;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery li {
+    list-style: none;
+}
+
+picture,
+img {
+    max-width: 90%;
+}
+
+img {
+    border: 2px solid #000;
+}
+
+img:hover {
+    border: 2px solid #FFD51B;
+    cursor: pointer;
+    animation-name: glow;
+    animation-duration: 0.9s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+/* Viewports */
+
+
+/* Small Sized (Less than 600px) */
+
+@media screen and (max-width: 600px) {
+    h1 {
+        border-bottom: 3px solid #000;
+    }
+    .gallery {
+        text-align: center;
+    }
+    img {
+        border-top-width: 50px;
+        border-bottom-width: 50px;
+    }
+    @keyframes glow {
+        from {
+            box-shadow: initial;
+            border-top-width: 50px;
+            border-bottom-width: 50px;
+        }
+        to {
+            box-shadow: 0 2px 10px #FFF, 0 -2px 10px #FFF, 0 0 10px #FFF, -2px 0 10px #000, -2px -2px 10px #FFF, -2px 2px 10px #FFF, 2px 0 10px #000, 2px -2px 10px #000, 2px 2px 10px #000;
+            border-top-width: 50px;
+            border-bottom-width: 50px;
+        }
+    }
+}
+
+
+/* Medium Sized (Between 600px and 1200px) */
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .gallery li {
+        float: left;
+        margin: 2% 0;
+        width: 50%;
+        text-align: center;
+    }
+    img {
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+    }
+    @keyframes glow {
+        from {
+            box-shadow: initial;
+            border-top-width: 60px;
+            border-bottom-width: 60px;
+        }
+        to {
+            box-shadow: 0 2px 10px #FFF, 0 -2px 10px #FFF, 0 0 10px #FFF, -2px 0 10px #000, -2px -2px 10px #FFF, -2px 2px 10px #FFF, 2px 0 10px #000, 2px -2px 10px #000, 2px 2px 10px #000;
+            border-top-width: 60px;
+            border-bottom-width: 60px;
+        }
+    }
+}
+
+
+/* Large Sized (Greater than 1200px) */
+
+@media screen and (min-width: 1200px) {
+    .gallery li {
+        float: left;
+        margin: 0.8% 0;
+        width: 25%;
+        text-align: center;
+    }
+    img {
+        border-top-width: 40px;
+        border-bottom-width: 40px;
+    }
+    img:active {
+        border-radius: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    @keyframes glow {
+        from {
+            box-shadow: initial;
+            border-top-width: 40px;
+            border-bottom-width: 40px;
+        }
+        to {
+            box-shadow: 0 2px 10px #FFF, 0 -2px 10px #FFF, 0 0 10px #FFF, -2px 0 10px #000, -2px -2px 10px #FFF, -2px 2px 10px #FFF, 2px 0 10px #000, 2px -2px 10px #000, 2px 2px 10px #000;
+            border-top-width: 40px;
+            border-bottom-width: 40px;
+        }
+    }
+}
